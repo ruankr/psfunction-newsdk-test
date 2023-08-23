@@ -1,0 +1,9 @@
+{
+  "bindings": [
+    {
+      "name": "afItems",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ]
+}

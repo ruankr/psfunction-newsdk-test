@@ -1,0 +1,17 @@
+{
+  "bindings": [
+    {
+      "name": "SbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "test-orchestration",
+      "subscriptionName": "test-orchestration-sub",
+      "connection": "ldevorchestrationuksservicebus_SERVICEBUS"
+    },
+    {
+      "name": "durablestarter",
+      "type": "orchestrationClient",
+      "direction": "in"
+    }
+  ]
+}

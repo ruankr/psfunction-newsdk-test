@@ -1,0 +1,41 @@
+{
+  "version": "2.0",
+  "concurrency": {
+    "dynamicConcurrencyEnabled": false,
+    "snapshotPersistenceEnabled": false
+  },
+  "functionTimeout": "00:10:00",
+  "extensions": {
+    "durableTask": {
+      "hubName": "%TaskHubName%"
+    }
+  },
+  "logging": {
+    "fileLoggingMode": "debugOnly",
+    "logLevel": {
+      "default": "Warning",
+      "Function": "Error",
+      "Host.Triggers.DurableTask": "Information",
+      "Host.Aggregator": "Error",
+      "Host.Results": "Information",
+      "Function.af-test-activity1": "Error",
+      "Function.af-test-activity1.User": "Information",
+      "DurableTask.AzureStorage": "Warning",
+      "DurableTask.Core": "Warning",
+      "Azure.Core": "Error"
+    },
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Exception;Request"
+      }
+    }
+  },
+  "managedDependency": {
+    "enabled": true
+  },
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[3.*, 4.0.0)"
+  }
+}
